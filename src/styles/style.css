@@ -1,0 +1,15 @@
+#app {
+  color: #A0A0A0;
+  font: 14px "Helvetica Neue", Helvetica, SansSerif;
+  min-width: 550px;
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+a.active {
+  color: orange;
+}
+
+nav {
+  padding-top: 20px;
+}
