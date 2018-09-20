@@ -1,3 +1,7 @@
+/*
+ * Copyright (c) 2018. https://ashishsantikari.info
+ */
+
 import React, {PropTypes} from 'react';
 import {connect} from 'react-redux';
 import * as courseActions from '../../actions/courseActions';
@@ -8,6 +12,12 @@ class CoursesPage extends React.Component {
 
   constructor(props, context) {
     super(props, context);
+
+    this.redirectToAddCourse = this.redirectToAddCourse.bind(this);
+  }
+
+  redirectToAddCourse() {
+    this.context.router.push('/course');
   }
 
   render() {
@@ -17,7 +27,8 @@ class CoursesPage extends React.Component {
     return (
       <div>
         <h1>Courses</h1>
-        <CourseList courses={courses} />
+        <input type="submit" value="Add Course" className="btn btn-primary" onClick={this.redirectToAddCourse}/>
+        <CourseList courses={courses}/>
       </div>
     );
   }
@@ -29,7 +40,11 @@ CoursesPage.propTypes = {
   actions: PropTypes.object.isRequired
 };
 
-function mapStateToProps(state, ownProps) {
+CoursesPage.contextTypes = {
+  router: PropTypes.object
+};
+
+function mapStateToProps(state) {
   return {
     courses: state.courses
   };

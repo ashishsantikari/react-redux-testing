@@ -1,5 +1,9 @@
+/*
+ * Copyright (c) 2018. https://ashishsantikari.info
+ */
+
 import React from 'react';
-import {Route, IndexRoute} from 'react-router';
+import {IndexRoute, Route} from 'react-router';
 import App from './components/App';
 import CoursesPage from "./components/course/CoursesPage";
 import Home from "./components/home/Home";

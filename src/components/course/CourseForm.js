@@ -1,11 +1,15 @@
+/*
+ * Copyright (c) 2018. https://ashishsantikari.info
+ */
+
 import React, {PropTypes} from 'react';
 import TextInput from "../common/TextInput";
 import SelectInput from "../common/SelectInput";
 
-const CourseForm = ({course, allAuthors, onSave, onChange, loading, errors}) => {
+const CourseForm = ({course, allAuthors, onSave, onChange, saving, errors}) => {
   return (
     <form>
-
+      <h1>Manage Course</h1>
       <TextInput
         label="Title"
         onChange={onChange}
@@ -16,6 +20,7 @@ const CourseForm = ({course, allAuthors, onSave, onChange, loading, errors}) => 
       <SelectInput
         label="Author"
         defaultOption="Select Author"
+        value={course.authorId}
         name="authorId"
         onChange={onChange}
         options={allAuthors}/>
@@ -25,22 +30,21 @@ const CourseForm = ({course, allAuthors, onSave, onChange, loading, errors}) => 
         onChange={onChange}
         error={errors.category}
         value={course.category}
-        name="category "/>
+        name="category"/>
 
       <TextInput
         label="length"
         onChange={onChange}
         error={errors.length}
         value={course.length}
-        name="length "/>
+        name="length"/>
 
       <input
         type="submit"
-        onSubmit={onSave}
-        disabled={loading}
-        value={loading ? 'Saving...' : 'Save'}
+        onClick={onSave}
+        disabled={saving}
+        value={saving ? 'Saving...' : 'Save'}
         className="btn btn-primary"/>
-
     </form>
   );
 };
@@ -48,9 +52,9 @@ const CourseForm = ({course, allAuthors, onSave, onChange, loading, errors}) => 
 CourseForm.propTypes = {
   course: PropTypes.object.isRequired,
   allAuthors: PropTypes.array,
-  onSave: PropTypes.func,
-  onChange: PropTypes.func,
-  loading: PropTypes.bool,
+  onSave: PropTypes.func.isRequired,
+  onChange: PropTypes.func.isRequired,
+  saving: PropTypes.bool,
   errors: PropTypes.object
 };
 

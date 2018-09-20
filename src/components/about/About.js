@@ -1,3 +1,7 @@
+/*
+ * Copyright (c) 2018. https://ashishsantikari.info
+ */
+
 import React from 'react';
 
 const About = () => {

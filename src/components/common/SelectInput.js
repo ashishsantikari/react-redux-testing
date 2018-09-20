@@ -1,3 +1,7 @@
+/*
+ * Copyright (c) 2018. https://ashishsantikari.info
+ */
+
 import React, {PropTypes} from 'react';
 
 const SelectInput = ({name, label, onChange, defaultOption, value, error, options}) => {

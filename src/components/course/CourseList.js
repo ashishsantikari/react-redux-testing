@@ -1,3 +1,7 @@
+/*
+ * Copyright (c) 2018. https://ashishsantikari.info
+ */
+
 import React, {PropTypes} from 'react';
 import CourseListRow from './CourseListRow';
 

@@ -1,4 +1,8 @@
-import React, {PropTypes} from 'react';
+/*
+ * Copyright (c) 2018. https://ashishsantikari.info
+ */
+
+import React from 'react';
 
 const Home = () => {
   return (

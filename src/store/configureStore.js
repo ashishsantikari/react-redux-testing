@@ -1,4 +1,8 @@
-import {createStore, applyMiddleware, compose} from 'redux';
+/*
+ * Copyright (c) 2018. https://ashishsantikari.info
+ */
+
+import {applyMiddleware, compose, createStore} from 'redux';
 import rootReducer from '../reducers';
 import reduxImmutableStateInvariant from 'redux-immutable-state-invariant';
 import thunk from 'redux-thunk';
