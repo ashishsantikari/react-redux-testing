@@ -36,7 +36,7 @@
     "babel-preset-react-hmre": "1.1.1",
     "babel-register": "6.8.0",
     "cheerio": "0.22.0",
-    "colors": "1.1.2",
+    "colors": "1.4.0",
     "compression": "1.6.1",
     "cross-env": "1.0.7",
     "css-loader": "0.23.1",
